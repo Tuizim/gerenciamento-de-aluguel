@@ -1,13 +1,13 @@
 package com.oikos.api.dto.authentication;
 
-import com.oikos.api.enums.TipoUsuario;
+import com.oikos.api.enums.UserRole;
 
 public record RegisterDto(
-        String nome,
+        String name,
         String email,
         String password,
-        String telefone,
-        TipoUsuario role,
-        String login
+        String phone,
+        UserRole role,
+        String username
 ) {
 }

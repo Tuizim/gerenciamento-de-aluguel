@@ -13,12 +13,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class UserResponseDTO {
-    private UUID uuid;
-    private String nome;
+    private String username;
+    private String name;
     private String email;
-    private String telefone;
-    private String tipoUsuario;
-    private Boolean ativo;
-    private LocalDateTime dataCriacao;
-    private LocalDateTime dataAtualizacao;
+    private String phone;
+    private String role;
+    private Boolean active;
+    private LocalDateTime create_at;
+    private LocalDateTime update_at;
 }

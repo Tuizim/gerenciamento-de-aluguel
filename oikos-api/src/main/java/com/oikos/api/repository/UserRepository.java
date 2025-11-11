@@ -12,7 +12,7 @@ import com.oikos.api.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User,Long> {
     Optional<User> findByUuid(UUID uuid);
-    UserDetails findByLogin(String login);
+    UserDetails findByUsername(String login);
     boolean existsByUuid(UUID uuid);
     void removeByUuid(UUID uuid);
 }

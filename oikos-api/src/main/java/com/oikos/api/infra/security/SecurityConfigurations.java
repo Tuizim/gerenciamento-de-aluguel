@@ -1,6 +1,6 @@
 package com.oikos.api.infra.security;
 
-import com.oikos.api.enums.TipoUsuario;
+import com.oikos.api.enums.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,7 +27,7 @@ public class SecurityConfigurations {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize-> authorize
-                        .requestMatchers(HttpMethod.POST,"/api/auth/register").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST,"/api/auth/register").hasRole(UserRole.ADMIN.getDescription())
                         .requestMatchers(HttpMethod.POST,"/api/auth/login").permitAll()
                         .requestMatchers(
                                 "/v3/api-docs/**",

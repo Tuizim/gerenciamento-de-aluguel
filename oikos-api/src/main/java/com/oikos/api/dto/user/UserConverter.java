@@ -21,13 +21,14 @@ public class UserConverter {
 
     public UserResponseDTO entityToResponseDto(User entity) {
         return UserResponseDTO.builder()
-        .uuid(entity.getUuid())
-        .nome(entity.getNome())
+        .name(entity.getName())
+        .username(entity.getUsername())
         .email(entity.getEmail())
-        .telefone(entity.getTelefone())
-        .ativo(entity.getAtivo())
-        .dataCriacao(entity.getDataCriacao())
-        .dataAtualizacao(entity.getDataAtualizacao())
+        .phone(entity.getPhone())
+        .active(entity.getActive())
+        .create_at(entity.getCreatedAt())
+        .update_at(entity.getUpdatedAt())
+        .role(entity.getRole().getDescription())
         .build();
     }
 
