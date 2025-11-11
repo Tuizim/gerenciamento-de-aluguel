@@ -29,7 +29,7 @@ public class User implements UserDetails {
 
     @Builder.Default
     @Column(nullable = false, unique = true, columnDefinition = "uuid DEFAULT uuid_generate_v4()")
-    private UUID uuid = UUID.randomUUID();;
+    private UUID uuid = UUID.randomUUID();
 
     @Column(nullable = false, length = 150)
     private String name;

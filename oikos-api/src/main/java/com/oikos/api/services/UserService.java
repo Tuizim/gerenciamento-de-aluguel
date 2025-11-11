@@ -20,7 +20,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
     
-    private UserConverter userConverter = new UserConverter();
+    private final UserConverter userConverter = new UserConverter();
 
     public UserResponseDTO findDtoByUuid(UUID uuid){
         return userConverter.entityToResponseDto(findByUuid(uuid));
