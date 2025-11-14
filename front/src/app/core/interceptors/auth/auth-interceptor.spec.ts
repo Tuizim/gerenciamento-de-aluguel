@@ -34,7 +34,7 @@ describe('authInterceptor', () => {
     httpMock.verify();
   });
 
-  it('deve adicionar Authorization, quando possuir token', () => {
+  it('need to put Authorization header, when have token', () => {
     http.get('/test').subscribe();
     const req = httpMock.expectOne('/test');
 
@@ -42,7 +42,7 @@ describe('authInterceptor', () => {
 
     req.flush({});
   });
-  it('não deve adicionar Authorization, quando não possuir token', () => {
+  it('dont have to put Authorization header, when dont have a token', () => {
     mockAuthService.getToken.and.returnValue(undefined)
     
     http.get('/test').subscribe();
