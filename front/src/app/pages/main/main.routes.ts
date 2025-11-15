@@ -2,7 +2,7 @@ import { Routes } from "@angular/router";
 import { Welcome } from "../layouts/welcome/welcome";
 import { Monitor } from "../layouts/monitor/monitor";
 import { Main } from "./main";
-import { authGuard } from "../../core/auth-guard";
+import { authGuard } from "../../core/guard/auth-guard";
 
 export const MAIN_ROUTES: Routes = [
   {
